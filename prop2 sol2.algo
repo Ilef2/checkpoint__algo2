@@ -1,0 +1,32 @@
+ALGORITHM hash distinct
+VAR
+  TAB1,TAB2,TAB3:HASH_TABLE<INTEGER,INTEGER>
+  
+   som:INTEGER:=0
+   i : INTEGER;
+   j :INTEGER:=0;
+BEGIN
+// remplissage tab1
+TAB1.insert(0,12)
+TAB1.insert(1,13)
+TAB1.insert(2,6)
+TAB1.insert(3,10)
+write(TAB1)
+//remblissage tab2
+
+TAB2.insert(0,13)
+TAB2.insert(1,10)
+TAB2.insert(2,16)
+TAB2.insert(3,15)
+write(TAB2)
+
+
+FOR i FROM 0 TO 3 STEP step  DO
+    IF (TAB2.lookup(TAB1[i])=false) THEN
+        som:=som+(TAB1[i]*2)
+        TAB3[j].insert(i,TAB1[i])
+        
+        j:=j+1
+    END_IF
+END_FOR
+write(som , " commun elements: ", TAB3[])

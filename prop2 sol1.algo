@@ -1,0 +1,17 @@
+ALGORITHM som_commun
+VAR
+TAB1 : [12, 13, 6, 10]
+TAB2: [13, 10, 16, 15]
+TAB3 : ARRAY_OF INTEGER [];
+som:INTEGER :=0
+j :INTEGER:=0
+BEGIN
+FOR i FROM 0 TO  TAB1.length-1 STEP step  DO
+    IF (TAB2.includes(TAB1[i])=true) THEN
+    som:=som+(TAB1[i]*2)
+    TAB3[j] :=TAB1[i]   
+    j:=j+1
+    END_IF
+  
+END_FOR
+write(som , " commun elements: ", TAB3[])
